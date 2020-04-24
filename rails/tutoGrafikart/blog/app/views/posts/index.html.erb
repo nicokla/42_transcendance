@@ -1,0 +1,13 @@
+<h1>Articles</h1>
+
+<!--% @posts.each do |post| %-->
+	<!--%= render 'post', post: post%-->
+	<!--%= render post %-->
+<!--% end %-->
+
+<!--%= render partial: 'post', collection: @posts %-->
+<%= render @posts %>
+
+<p>
+	<a href="<%= new_post_path %>" class="btn btn-success">Creer un article</a>
+</p>

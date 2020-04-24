@@ -1,0 +1,15 @@
+<% content_for(:title, @post.name) %>
+
+<% content_for :content do %>
+	<h1><%= @post.name %></h1>
+	<p> <%= @post.content%></p>
+	<p> 
+		<a href="<%= posts_path %>" class="btn btn-primary">Revenir aux articles</a>
+	</p>
+<% end %>
+
+<% content_for :sidebar do %>
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis modi perferendis maxime fugit. Voluptates veniam blanditiis quis cupiditate a dolore, nobis explicabo vel harum obcaecati, iste quisquam corrupti porro repellat.
+<% end %>
+
+<%= render template: 'layouts/sidebar'%>

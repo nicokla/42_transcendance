@@ -1,0 +1,97 @@
+search
+
+---------------------------
+with postgresql
+
+
+step 1: create project
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos
+
+11095  brew install postgresql
+11096* echo 'export PATH="/usr/local/opt/postgresql@12/bin:$PATH"' >> ~/.zshrc
+11097* source ~/.zshrc
+11098* brew services start postgresql@12
+11099* postgres -V\n
+11100* createuser -P -d appname
+11101* psql postgres
+11102* rails new appname -d=postgresql
+11103* cd appname
+11104* echo 'export APPNAME_DATABASE_PASSWORD="password"' >> ~/.zshrc
+11105* source .zshrc
+11106* source ~/.zshrc
+11107* rails db:create
+11108* rails server --binding=127.0.0.1\n
+
+
+https://youtu.be/KdDa4cXKckI?t=253
+11112  rails generate scaffold post title:string body:text
+11114  rails db:migrate
+dans chrome localhost:3000/posts
+
+https://www.youtube.com/watch?v=n41F29Qln5E
+	Ruby on Rails - Railscasts PRO #343 Full-Text Search in PostgreSQL
+https://stackoverflow.com/questions/42975121/postgresql-full-text-search-does-not-take-params-from-form-in-rails
+https://stackoverflow.com/questions/23873263/rails-4-postgres-full-text-search-error-scoped/23873494
+(search functionality)
+
+
+suite : texticle or pg_search
+
+
+
+
+---------------------------
+
+
+https://github.com/csm123/Rails-Full-Text-Search-with-Postgres-Example
+	http://aspiringwebdev.com/full-text-search-with-rails-and-postgres-across-multiple-tables/
+	https://thoughtbot.com/blog/implementing-multi-table-full-text-search-with-postgres
+
+https://github.com/railscasts/343-full-text-search-in-postgresql
+	https://www.youtube.com/watch?v=n41F29Qln5E
+	Ruby on Rails - Railscasts PRO #343 Full-Text Search in PostgreSQL
+	https://www.youtube.com/watch?v=UpEQQ8mVpwY&t=16s
+	Ruby on Rails - Railscasts #342 Migrating To Postgresql
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres
+https://www.codementor.io/@engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
+https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html
+https://www.a2hosting.com/kb/developer-corner/postgresql/managing-postgresql-databases-and-users-from-the-command-line
+
+https://www.youtube.com/watch?v=pf5jPUJAeU4
+	How to Setup PostgreSQL for Rails Development on OS X
+
+https://stackoverflow.com/questions/7975556/how-to-start-postgresql-server-on-mac-os-x
+https://stackoverflow.com/questions/8037729/completely-uninstall-postgresql-9-0-4-from-mac-osx-lion
+https://stackoverflow.com/questions/39710384/cannot-connect-to-postgres-server-running-through-brew-services
+https://stackoverflow.com/questions/17633422/psql-fatal-database-user-does-not-exist
+
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+psql -h host_ip -U db_username -d db_name
+createdb blog_development
+
+--------------------------------------
+
+without postgresql
+
+https://www.youtube.com/watch?v=s88Uc0InOAM&t=606s
+	How to Implement a Search Feature in Ruby on Rails - jesus castello
+
+https://www.youtube.com/watch?v=9tfZ0mFJlYc
+	Searching for Students at Hogwarts on Rails
+
+https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1
+	https://github.com/maltyeva/simple_search
+
+https://medium.com/@zylberberg.jonathan/creating-a-search-form-in-rails-5-77fdef6be74d
+
+https://dev.to/mwong068/adding-a-basic-search-form-in-rails-5hnl
+
+https://melvinchng.github.io/rails/SearchFeature.html#chapter-4-search-feature
+
+
+

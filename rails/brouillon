@@ -1,0 +1,374 @@
+Respect yourself enough to walk away from anything that no longer serves you, grows you, or makes you happy.
+
+
+https://www.youtube.com/watch?v=pPy0GQJLZUM&list=WL&index=56
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos
+
+rbenv install -l
+rbenv install 2.6.3
+rbenv global 2.6.3
+rbenv versions
+gem install rails -v 5.2.3
+gem list rails
+gem list bundler
+bundle _1.11.2_ install
+rails _4.1.5_ install
+
+gem list bundler
+gem uninstall bundler
+gem install bundler --version '1.3.0'
+bundle update --bundler
+bundle -v
+
+gem environment
+/Users/nicolas/.rvm/gems/ruby-2.7.0/gems
+
+bundle _1.11.2_ install
+rvm @global do gem install bundler -v 1.17.1
+bundle update --bundler
+
+rvm @global do gem install bundler -v 1.3.0
+bundle _1.3.0_ install
+rails _4.1.5_ s
+
+/Users/nicolas/.rvm/gems/ruby-2.7.0/specifications
+https://medium.com/@namangupta01/replacing-rvm-with-rbenv-in-os-x-9dea622bd639
+
+https://stackoverflow.com/questions/8877772/how-do-you-use-multiple-rails-versions-with-rbenv
+
+https://rubygems.org/?locale=fr
+
+https://github.com/rubygems/bundler/issues/7107
+gem environment
+rm /Users/nicolas/.rvm/gems/ruby-2.7.0/specifications/default/rails-4.1.5.gemspec
+# gem uninstall bundler -v 2.1.2
+# gem install bundler -v 2.1.4
+bundle _2.1.4_ update --bundler
+
+---------------
+
+rails generate scaffold User nom:string email:string
+
+
+bundle install
+rake db:migrate
+rails server
+
+
+--------------
+
+
+
+% gem install bundler -v '~> 1.0.0'
+% bundle _1.0.22_ install
+
+2.1.2
+gem install bundler -v 1.3.0
+bundle _1.3.0_ install
+
+....
+
+bundle _2.1.2_ install
+
+
+-----------------------
+
+
+rails new blogName
+(bundle update && bundle install)
+rails server
+http://localhost:3000
+rails generate model Article title:string text:text
+...
+
+
+sudo gem update
+
+
+bundle install
+rake db:migrate
+rails s
+
+
+
+------------
+
+
+`brew install rbenv ruby-build
+
+Add rbenv to bash so that it loads every time you open a terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
+
+Install Ruby
+rbenv install 2.3.3
+rbenv shell 2.3.3
+ruby -v`
+
+6.0.2.2
+
+
+--------------------
+
+
+https://makandracards.com/makandra/21545-rbenv-how-to-switch-to-another-ruby-version-temporarily-per-project-or-globally
+rbenv shell
+rbenv local
+rbenv global
+
+
+------------------
+
+https://docs.bitnami.com/aws/infrastructure/ruby/configuration/manage-rubies/
+
+rvm list
+rvm rubies
+
+
+---------------------
+
+https://dev.to/krtb/why-and-how-i-replaced-rvm-with-rbenv-23ad
+
+
+----------------------------
+
+
+https://guides.rubyonrails.org/association_basics.html#has-many-association-reference
+
+has_many
+	https://guides.rubyonrails.org/association_basics.html#has-many-association-reference
+belongs_to
+	https://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
+
+--------------------------
+
+rbenv versions
+	rbenv install 2.6.2
+	rbenv global 2.6.2
+gem list rails
+	gem install rails -v 5.2.3
+
+bundle install
+rake db:migrate
+rails server
+
+brew install redis
+redis-server
+
+------------------------------------
+
+
+bundle install
+rake db:migrate
+rails s
+
+yarn add jquery
+
+config/webpack/environment.js
+config/routes.rb
+db/migrate/...
+app/models/...
+app/controllers/landing_controller.rb
+app/views/...
+app/views/layouts/...
+app/views/landing/index.html.erb
+app/assets/stylesheet/application.css
+app/javascript/channels/consumer.js
+app/javascript/packs/application.js
+
+rails new todo
+rails s
+rails g scaffold todo_list title:string description:text
+rails g model todo_item content:string todo_list:references
+rails g controller todo_items
+rails g migration add_completed_at_todo_items completed_at:datetime
+rails g channel room
+
+rake db:migrate
+rake routes
+
+
+------------------
+
+
+models (tuto5_2)
+
+class TodoList < ApplicationRecord
+	has_many :todo_items
+end
+
+class TodoItem < ApplicationRecord
+	belongs_to :todo_list
+	def completed?
+  	!completed_at.blank?
+  end
+end
+
+
+---------------------
+
+models 2 (tuto9)
+
+class ApplicationRecord < ActiveRecord::Base
+  self.abstract_class = true
+end
+------> aussi present dans tuto7
+
+class RoomMessage < ApplicationRecord
+  belongs_to :room, inverse_of: :room_messages
+  belongs_to :user
+  def as_json(options)
+    super(options).merge(user_avatar_url: user.gravatar_url)
+  end
+end
+
+class Room < ApplicationRecord
+  has_many :room_messages, dependent: :destroy,
+                           inverse_of: :room
+end
+
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  validates :username, uniqueness: true, presence: true
+  has_many :room_messages,
+           dependent: :destroy
+  def gravatar_url
+    gravatar_id = Digest::MD5::hexdigest(email).downcase
+    "https://gravatar.com/avatar/#{gravatar_id}.png"
+  end
+end
+
+
+----------------------
+
+model 3 (tuto10/day6/lifeprotips)
+
+class User < ActiveRecord::Base
+  has_secure_password
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+  validates :password, length: { minimum: 8 }
+end
+
+
+
+----------------------
+
+models synthese
+
+rails g model todo_item content:string todo_list:references
+
+
+has_many
+	https://guides.rubyonrails.org/association_basics.html#has-many-association-reference
+belongs_to
+	https://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
+has_and_belongs_to_many
+	https://stackoverflow.com/questions/34208348/model-design-users-have-friends-which-are-users
+validates
+	???
+
+
+----------------------------------
+
+controller 1
+
+big struct containing smaller structs
+  def index
+    @todo_lists = TodoList.all
+  end
+
+	def index
+    @rooms = Room.all
+  end
+
+
+smaller struct
+ def create
+    @room_message = RoomMessage.create user: current_user,
+                                       room: @room,
+                                       message: params.dig(:room_message, :message)
+   RoomChannel.broadcast_to @room, @room_message
+  end
+
+	def create
+		@todo_item = @todo_list.todo_items.create(params[:todo_item].permit(:content))
+		redirect_to @todo_list
+	end
+
+
+
+--------------------
+
+
+controllers synthese
+
+rails g controller todo_items
+
+before_action
+	https://guides.rubyonrails.org/action_controller_overview.html
+
+index show new create destroy
+
+class SessionsController < ApplicationController
+
+------------------------------
+
+
+
+config/routes.rb
+
+Rails.application.routes.draw do
+  devise_for :users
+  root controller: :rooms, action: :index    !!!!!!!!!!
+  resources :room_messages
+  resources :rooms
+end
+
+
+Rails.application.routes.draw do
+	resources :todo_lists do
+		resources :todo_items do
+			member do
+				patch :complete
+			end
+		end
+	end
+	root "todo_lists#index"     !!!!!!!!!!
+end
+
+
+------------------------
+
+config/routes.rb
+db/migrate/...
+	rails g migration add_completed_at_todo_items completed_at:datetime
+app/models/...
+	rails g model todo_item content:string todo_list:references
+app/controllers/...
+	rails g controller todo_items
+app/views/...
+app/views/layouts/...
+	rails g scaffold todo_list title:string description:text
+app/assets/stylesheet/application.css
+
+
+
+
+https://www.stuartellis.name/articles/erb/
+
+https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application
+
+
+
+-------------------------------
+
+
+
+

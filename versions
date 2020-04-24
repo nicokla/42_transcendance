@@ -1,0 +1,181 @@
+https://stackoverflow.com/questions/9087116/which-ruby-on-rails-is-compatible-with-which-ruby-version
+
+
+Since 9th April 2019, stable branches of Rails use Buildkite for automated testing, and the list of tested ruby versions, by rails branch, is:
+
+Rails 6.0
+>= 2.5.0
+
+Rails 5.2
+>= 2.2.2
+
+Rails 5.1
+>= 2.2.2
+
+Rails 5.0
+>= 2.2.2
+
+Rails 4.2
+>= 1.9.3
+
+Rails 4.1
+>= 1.9.3
+
+Prior to 9th April 2019, stable branches of Rails since 3.0 use travis-ci for automated testing, and the list of tested ruby versions, by rails branch, is:
+
+Rails 3.0
+1.8.7
+1.9.2
+1.9.3
+
+Rails 3.1
+1.8.7
+1.9.2
+1.9.3
+
+Rails 3.2
+1.8.7
+1.9.2
+1.9.3
+2.0.0
+2.1.8
+2.2.6
+2.3.3
+
+Rails 4.0
+1.9.3
+2.0.0
+2.1
+2.2
+
+Rails 4.1
+1.9.3
+2.0.0
+2.1
+2.2.4
+2.3.0
+
+Rails 4.2
+1.9.3
+2.0.0-p648
+2.1.10
+2.2.10
+2.3.8
+2.4.5
+
+Rails 5.0
+2.2.10
+2.3.8
+2.4.5
+
+Rails 5.1
+2.2.10
+2.3.7
+2.4.4
+2.5.1
+
+Rails 5.2
+2.2.10
+2.3.7
+2.4.4
+2.5.1
+
+Rails 6.0
+2.5.3
+2.6.0
+
+
+------------------------------------
+
+
+https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html
+
+
+
+
+Rails Version				Required		Recommended		Required Rubygems
+6.0.0								>= 2.5.0		>= 1.8.11	
+5.0.0 to 5.2.x			>= 2.2.2		>= 1.8.11	
+4.2.x								>= 1.9.3		2.2						>= 1.8.11	
+4.1.x to 4.2.0			>= 1.9.3		2.1						>= 1.8.11	
+4.0.5 to 4.1.0.rc2	>= 1.9.3									>= 1.8.11	
+4.0.0 to 4.0.x			>= 1.8.7									>= 1.8.11	
+3.2.22 to 3.2.22.5	1.8.7				2.2						>= 1.3.6	
+3.2.13 to 3.2.22.4	1.8.7				2.0						>= 1.3.6	
+0.8.0 to 3.2.13.rc2	1.8.7											>= 1.3.6	
+
+
+----------------------
+
+https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions
+
+
+Rails 6 requires Ruby 2.5.0 or newer.
+Rails 5 requires Ruby 2.2.2 or newer.
+Rails 4 prefers Ruby 2.0 and requires 1.9.3 or newer.
+Rails 3.2.x is the last branch to support Ruby 1.8.7.
+Rails 3 and above require Ruby 1.8.7 or higher. Support for all of the previous Ruby versions has been dropped officially. You should upgrade as early as possible.
+
+
+
+--------------------------------
+
+https://rubygems.org/gems/rails/versions
+
+https://www.ruby-lang.org/en/downloads/releases/
+
+https://rubygems.org/gems/bundler/versions
+https://bundler.io/compatibility.html
+
+
+1) rails 3.2.3
+	--> 6) gem list rails
+	--> 7) gem install rails -v 3.2.3
+	--> 7.2) rails -v
+2) ruby 1.9.2
+	--> 3.1) rbenv versions
+	--> 3.2) rbenv install -l | grep 1.9.3
+	--> 4) rbenv install 1.9.3-p551
+	--> 5) rbenv global 1.9.3-p551
+	--> 5.2) ruby -v
+8) bundler 1.5.3
+	--> 9) gem query --local bundle
+	--> 10) gem install bundler -v 1.5.3
+	--> 10.2) bundle -v
+11)
+bundle install
+bundle exec rake db:create:all
+bundle exec rake db:migrate    (bundle exec rake db:migrate)
+rails server
+
+
+
+
+--------------------
+
+# gem list | grep json      https://rubygems.org/gems/json/versions/
+
+
+
+
+---------------------------------
+
+
+https://makandracards.com/makandra/59328-how-to-upgrade-rails-workflow-advice
+
+rbenv versions
+	rbenv install -l
+	rbenv install 2.6.2
+	rbenv global 2.6.2
+gem list rails
+	gem install rails -v 5.2.3
+bundle -v
+gem query --local bundle
+bundler env
+	gem install bundler -v '~> 1.0'
+
+bundle update && bundle _1.17.3_ install
+rake db:migrate
+rails server
+
+

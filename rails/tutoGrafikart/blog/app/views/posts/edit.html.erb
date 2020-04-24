@@ -1,0 +1,13 @@
+<h1>Editer l'article</h1>
+
+<!--%= render partial: 'form', locals: {item: @post} %-->
+
+<!--%= url_for(controller: 'posts', action: 'index', host: 'local.dev', port: 8080, only_path: false) %-->
+<!--%= url_for(q: 'marecherche') %-->
+<!--%= url_for(@post) %-->
+<!--%= url_for([:edit, @post]) %-->
+<!--%= edit_post_path %-->
+
+<!--%= gravatar('contact@grafikart.fr') %-->
+
+<%= render 'form', post: @post %>

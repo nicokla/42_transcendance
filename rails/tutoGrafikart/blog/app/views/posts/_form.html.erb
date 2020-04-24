@@ -1,0 +1,36 @@
+
+<% if post.errors.any? %> <!-- post.invalid? -->
+	<div class="alert alert-danger">
+		<ul>
+			<% post.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+<%= form_for post do |f| %>
+	<div class="form-group">
+		<label>Titre de l'article</label>
+		<%= f.text_field :name, class: 'form-control' %>
+	</div>
+	
+	<div class="form-group">
+		<label>Url de l'article</label>
+		<%= f.text_field :slug, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<label for="category">Categorie</label>
+		<!--%= debug Category.pluck(:name, :id)  %-->
+		<%= f.select :category_id,  Category.pluck(:name, :id) %>
+	</div>
+
+	<div class="form-group">
+		<label>Contenu de l'article</label>
+		<%= f.text_area :content, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Midifier l'article</button>
+	</div>
+<% end %>

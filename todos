@@ -1,0 +1,64 @@
+connect 42 oauth
+
+chat real time
+create new chat channel
+
+display user page (name, wins, losses, friends, guild)
+search users (+ add friends, start chat, invite to game, etc.)
+
+game page to play pong
+
+display guild name (name, points, members, creator, admins, wars)
+search guild
+create guild
+ask to join guild
+
+war page (guild1, guild2, start, begin, scoreGuild1, scoreGuild2, ...)
+
+-------------------------
+
+
+sumup:
+
+1) sign in
+
+2) 
+show object
+search object
+create object
+update object
+delete object
+
+scrud : search, create, read, update, delete
+
+(objects: user, guild, channel, war, game (?) ...)
+
+3)
+real time chat
+
+4)
+real time pong game
+
+-----------------------------------
+
+- recherche (rails/search)
+- actioncable pong https://github.com/rlafranchi/pong
+- chat rails/chat/tuto12
+
+
+- essai structures
+
+
+- javascript
+- docker compose et rails
+- rails et backbone
+
+
+- oauth2 continuer
+
+
+
+
+
+
+

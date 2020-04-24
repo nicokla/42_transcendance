@@ -1,0 +1,15 @@
+<h1>Nouvelle categorie</h1>
+
+<%= form_for @category do |f| %>
+	<div class="form-group">
+		<label>Titre de la categorie</label>
+		<%= f.text_field :name, placeholder: 'Nom ', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<label>Url de la categorie</label>
+		<%= f.text_field :slug, placeholder: 'Url ', class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Creer la categorie</button>
+	</div>
+<% end %>

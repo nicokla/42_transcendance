@@ -1,0 +1,26 @@
+	<h2><%= post.name %></h2>
+	<p><%= post.content %></p>
+	<% if post.category %>
+		<p>
+			Categorie: <%= post.category.name %>
+		</p>
+	<% end %>
+
+	<% if !post.tags.empty? %>
+	<p>
+		Tags:
+		<%= post.tags.map(&:name).join(', ') %>
+		<!--% post.tags.each do |tag| %-->
+			<!--%= tag.name %-->
+		<!--% end %-->
+	</p>
+	<% end %>
+
+	<p>
+		<%= link_to('Lire la suite', post, class: 'btn btn-primary') %>
+		<%= link_to('Edit', [:edit, post], class: 'btn btn-default') %>
+		<%= link_to('Supprimer', post, class: 'btn btn-danger', data: {confirm: "Êtes vous sur ?"}, method: :delete) %>
+		<!--a href="<%= post_path(post.id) %>" class="btn btn-primary">Lire la suite</a-->
+		<!--a href="<%= edit_post_path(post.id) %>" class="btn btn-default">Editer</a-->
+		<!--a href="<%= post_path(post.id) %>" class="btn btn-danger" data-confirm="Êtes vous sur ?" data-method="DELETE">Supprimer</a-->
+	</p>

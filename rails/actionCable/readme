@@ -1,0 +1,43 @@
+
+-----------------------
+websocket and action-cable (chat, pong)
+
+https://guides.rubyonrails.org/v5.1/action_cable_overview.html#broadcasting
+
+
+https://github.com/rlafranchi/pong
+	Two player Pong reinvented using Vue.js and Rails w/ Action Cable
+
+
+https://www.youtube.com/watch?v=i_Zjqwh8yeI
+	Action Cable Chat App
+	https://github.com/Deanout/chatter
+
+https://github.com/joeyschoblaska/rails5chess
+	https://joeyschoblaska.com/posts/rails-5-chess-with-action-cable-websockets
+
+
+https://www.grafikart.fr/tutoriels/actioncable-rails-793
+https://medium.com/@sbal13/web-sockets-with-action-cable-c22592d8ef1c
+https://www.learnenough.com/action-cable-tutorial
+https://www.imaginarycloud.com/blog/websockets-and-action-cable-in-rails-5/
+
+
+------------------
+websocket with nodejs
+
+https://www.youtube.com/watch?v=JljMBn69fZM
+	coding train,  Stream #30: Creating Real-Time Shared Canvas with WebSockets
+
+---------------------
+websocket in rails but not with actioncable
+
+
+https://github.com/anycable/anycable_demo
+	https://evilmartians.com/chronicles/anycable-actioncable-on-steroids
+	https://docs.anycable.io/#/ruby/rails
+	https://github.com/mic-kul/chat-app-api
+
+
+
+-------------------

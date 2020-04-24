@@ -1,0 +1,28 @@
+<h1>Les categories</h1>
+
+<p>
+	Session: <%= @session.inspect %>
+</p>
+
+<table class="table">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Nom</td>
+			<td>Actions</td>
+		</tr>
+	</thead>
+	<tbody>
+	<% @categories.each do |category| %>
+	<tr>
+		<td><%= category.id %></td>
+		<td><%= category.name %></td>
+		<td><a href="<%= edit_category_path(category.id) %>" class="btn btn-primary">Editer</a>
+		<a href="<%= category_path(category.id) %>" class="btn btn-danger" data-confirm="sur ?" data-method="delete">Supprimer</a></td>
+	</tr>
+	<% end %>
+	</tbody>
+</table>
+<p>
+	<a href="<%= new_category_path %>" class="btn btn-success">Creer une nouvelle categorie</a>
+</p>

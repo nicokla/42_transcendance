@@ -1,0 +1,107 @@
+
+!!!!!!!!
+Working tutos:
+5, 7, 9
+
+
+!!!!!!!!!
+
+
+
+---------------
+
+tuto 5    ~~~ marche un peu. mais en suivant la video, sinon pb compilation du github
+https://github.com/mackenziechild/Todo-App.git
+https://www.youtube.com/watch?v=fd1Vn-Wvy2w
+
+
+--------------------
+tuto 3   ?????????
+https://github.com/RyanHemrick/Message-Board.git
+
+https://www.youtube.com/watch?v=wODY11lM7wk&list=PLhI0CvAwv8vR7N3DHLPGKvRffdNa--7Fo
+
+
+----------------
+
+tuto 6: rails chatroom
+https://www.youtube.com/watch?v=mBgHO3UEcjQ
+
+
+
+--------------------------
+
+http://installrails.com/
+
+tuto 1   !!!!!!!!!
+
+https://guides.rubyonrails.org/getting_started.html
+
+rails new blogName
+(bundle update && bundle install)
+rails server
+http://localhost:3000
+
+rails generate model Article title:string text:text
+
+
+-----------------------------
+tuto 2   pas de lien github
+grafikart
+
+https://www.youtube.com/watch?v=AG2mMAsuMwQ&list=PLjwdMgw5TTLWfI1B2Wv2WPgR9iOyw12zi
+https://www.grafikart.fr/formations/ruby-on-rails
+(github premium)
+
+
+-------------
+tuto 4   ?????????
+https://github.com/gothinkster/rails-realworld-example-app
+
+
+
+
+--------------------
+
+
+
+
+-------------------
+--------------------
+tutos later (?)
+http://french.railstutorial.org/chapters/a-demo-app#top
+
+https://dev.to/dnamsons/ruby-debugging-in-vscode-3bkj
+
+
+
+https://www.grafikart.fr/formations/ruby-on-rails
+
+https://api.rubyonrails.org/
+
+https://www.youtube.com/watch?v=g-wHoKOGBU4&list=PLjwdMgw5TTLWfI1B2Wv2WPgR9iOyw12zi&index=7
+
+https://www.youtube.com/watch?v=pPy0GQJLZUM&list=WL&index=56
+
+https://github.com/justalever/demo_blog_rails
+
+
+--------------------------
+
+!!!!!!!!!!!!!!!
+
+rbenv versions
+	rbenv install 2.6.2
+	rbenv global 2.6.2
+gem list rails
+	gem install rails -v 5.2.3
+bundle -v
+gem query --local bundle
+bundler env
+	gem install bundler -v '~> 1.0'
+
+bundle update && bundle _1.17.3_ install
+rake db:migrate
+rails server
+
+!!!!!!!!!!!!!!!!!!!!!

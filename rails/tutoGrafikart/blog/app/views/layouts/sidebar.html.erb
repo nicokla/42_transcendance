@@ -1,0 +1,14 @@
+<div class="row">
+	<% if content_for?(:sidebar) %>
+		<div class="col-sm-8">
+			<%= yield(:content) %>
+		</div>
+		<div class="col-sm-4">
+			<%= yield(:sidebar) %>
+		</div>
+	<% else %>
+		<div class="col-sm-12">
+			<%= yield(:content) %>
+		</div>
+	<% end %>
+</div>
