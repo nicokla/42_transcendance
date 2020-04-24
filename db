@@ -1,0 +1,96 @@
+User
+	name (string)
+	victories (int)
+	losses (int)
+	ladderLvl (int or float)
+	avatar (string ~ url)
+	guild (object)  !!!
+	friends (object list) !!!
+	status (string or enum)
+	chats (object list) !!!
+	games ? (object list)
+	blocked users (object list) !!!
+	tournaments (object list) !!!
+
+
+Chat
+	type (enum or string)
+	password (string)
+	Users (object list) !!!
+	owner (object) !!!
+	admins (object list) !!!
+	mutedUsers (object list) !!!
+	messages (list of strings or objects)
+ChatMessage
+	Author (object or string)
+	date (date)
+	content (string)
+	isInvitation ? (link or boolean)
+
+
+Guild
+	name (string)
+	anagram (string)
+	points (int)
+	owner (object) !!!
+	officers (object list) !!!
+	previousWars ? (object list)
+	users (object list) !!!
+	currentWar (object) !!!
+
+War
+	guild1 (object) !!!
+	guild2 (object) !!!
+	start (date)
+	end (date)
+	prize (int)
+	pointsGuild1 (int)
+	pointsGuild2 (int)
+	timeTable ?
+	guild2Agreed (boolean)
+	winner (boolean or string or object)
+	timeToAnswer (int in seconds)
+
+
+Game
+	user1 (object) !!!
+	user2 (object) !!!
+	pointsUser1 (int)
+	pointsUser2 (int)
+	usersWatching (object list) !!!
+	start (time)
+	finish (time)
+Game real time variables
+	xBall (float)
+	yBall (float)
+	vxBall (float)
+	vyBall (float)
+	y1 (float)
+	y2 (float)
+
+
+Tournament
+	start (date)
+	end (date)
+	prizes (object) !!!
+	participants (object list) !!!
+	results (TournamentScore list) !!!
+TournamentPrizes
+	prizes (int list)
+TournamentScore
+	User
+	Score
+
+
+
+Website
+	admins (object list) !!!
+	owner (object) !!!
+	chats (object list)
+	users (object list)
+	guilds (object list)
+	wars (object list)
+	games (object list)
+	tournaments (object list)
+
+

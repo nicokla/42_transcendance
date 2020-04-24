@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=nRP91C1uX-w
+
+bundle install
+rake db:migrate
+rails s
+
+yarn add jquery
+
+config/webpack/environment.js
+config/routes.rb
+db/migrate/...
+app/models/...
+app/controllers/landing_controller.rb
+app/views/...
+app/views/layouts/...
+app/views/landing/index.html.erb
+app/assets/stylesheet/application.css
+app/javascript/channels/consumer.js
+app/javascript/packs/application.js
+
+rails new todo
+rails s
+rails g scaffold todo_list title:string description:text
+rails g model todo_item content:string todo_list:references
+rails g controller todo_items
+rails g migration add_completed_at_todo_items completed_at:datetime
+rails g channel room
+
+rake db:migrate
+rake routes
+
+-------------------
+
+ruby 2.7.0
+rails 6.0.2.2
