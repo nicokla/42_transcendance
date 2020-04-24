@@ -15,8 +15,9 @@ app/views/...
 app/views/layouts/...
 app/views/landing/index.html.erb
 app/assets/stylesheet/application.css
-app/javascript/channels/consumer.js
+app/javascript/channels/room_channel.js
 app/javascript/packs/application.js
+app/channels/room_channel.rb
 
 rails new todo
 rails s
