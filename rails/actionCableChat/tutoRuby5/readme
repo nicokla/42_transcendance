@@ -1,0 +1,17 @@
+https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets
+
+https://github.com/iridakos/rails-chat-tutorial
+
+
+rbenv versions
+	rbenv install 2.6.2
+	rbenv global 2.6.2
+gem list rails
+	gem install rails -v 5.2.3
+
+bundle install
+rake db:migrate
+rails server
+
+brew install redis
+redis-server
