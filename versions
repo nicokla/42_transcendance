@@ -128,11 +128,11 @@ https://rubygems.org/gems/bundler/versions
 https://bundler.io/compatibility.html
 
 
-1) rails 3.2.3
-	--> 6) gem list rails
+1) rails 5.2.0
+	--> 6) gem list rails     /    gem uninstall rails -v 4.0.0
 	--> 7) gem install rails -v 3.2.3
 	--> 7.2) rails -v
-2) ruby 1.9.2
+2) ruby 2.5.1
 	--> 3.1) rbenv versions
 	--> 3.2) rbenv install -l | grep 1.9.3
 	--> 4) rbenv install 1.9.3-p551
@@ -143,6 +143,7 @@ https://bundler.io/compatibility.html
 	--> 10) gem install bundler -v 1.5.3
 	--> 10.2) bundle -v
 11)
+(bundle update)
 bundle install
 bundle exec rake db:create:all
 bundle exec rake db:migrate    (bundle exec rake db:migrate)
@@ -174,8 +175,16 @@ gem query --local bundle
 bundler env
 	gem install bundler -v '~> 1.0'
 
+gem i bundler -v 1.17.3
+bundle i
+
 bundle update && bundle _1.17.3_ install
 rake db:migrate
 rails server
 
 
+--------------------------
+
+https://medium.com/@relativkreativ/how-to-manage-multiple-rails-versions-bf5759d0823b
+bundle exec rails new . --force --skip-bundle
+bundle update

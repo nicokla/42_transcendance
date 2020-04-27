@@ -1,3 +1,52 @@
+
+ devise fait la partie oauth, 
+ rails_admin pour les pages d'admin, 
+ cancancan pour l'auth
+
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'cancancan'
+gem 'devise'
+gem 'simple_form'
+gem 'will_paginate'
+gem 'where_exists' # XXX consider activerecord_where_assoc
+gem 'kawaii_validation'
+gem 'carrierwave'
+gem 'action_args'
+gem 'active_decorator'
+gem 'haml-rails', '~> 2.0'
+
+https://github.com/vendethiel/PimpMyMap/blob/master/Gemfile#L6-L16
+
+
+
+----------------------
+
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :development do
+  gem "better_errors"  # !!!!!!!
+  gem "binding_of_caller" # !!!!!!
+
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+
+https://github.com/vendethiel/PimpMyMap/blob/master/Gemfile#L45-L60
+
+
+
+
+----------------
 connect 42 oauth
 
 chat real time

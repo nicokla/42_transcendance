@@ -1,39 +1,129 @@
 
+
+------------------------------
+!!!!!!!!!!!!!!!!
+
+la façon d'inclure la lib a pas forcément changé non plus :
+- tu fous la lib genre dans vendor/assets/javascripts/, fichier backbone.js
+- tu vas dans ton app/assets/javascripts/, fichier application.js
+- tu rajoutes un //= require backbone
+
+
+https://github.com/vendethiel/ItemRaffler/tree/coffee
+
+
+
+https://github.com/SSalekin/backbone_rails_demo
+	rails 5.2
+	https://viblo.asia/p/using-backbonejs-as-rails-view-1VgZvEwpKAw
+
+https://github.com/mohnish/money
+	rails 4.2.5
+https://github.com/seanomlor/kanban/
+	rails 4.2.4
+https://github.com/chiaowenlin075/mumblr
+	rails 4.2.4
+
+
+https://github.com/nwj/nevernote
+	rails 3.2.14
+https://github.com/vintikzzz/backbone-bootstrap-rails
+	rails 3.2.8
+https://github.com/dthtvwls/rails-backbone-todos
+	rails 3.2.3
+
+
+https://www.youtube.com/watch?v=lRuBxG7rTX4      (part 1) !!!!!!!!!!!!!!!
+https://www.youtube.com/watch?v=98oUGEz_y4g      (part 2)
+	https://github.com/railscasts?q=rails&type=&language=
+	https://github.com/railscasts/323-backbone-on-rails-part-1
+		rails 3.2.1
+	https://github.com/railscasts/325-backbone-on-rails-part-2
+	https://github.com/paul-ylz/raffler-railscast-backbone-tutorial
+		rails 4.1.5
+
+	
+-------------------------------
+
+
 tuto1
 (backbone + rails) videos
 https://www.youtube.com/watch?v=lRuBxG7rTX4      (part 1) !!!!!!!!!!!!!!!
 https://www.youtube.com/watch?v=98oUGEz_y4g      (part 2)
 	https://github.com/railscasts?q=rails&type=&language=
 	https://github.com/railscasts/323-backbone-on-rails-part-1
+		rails 3.2.1
 	https://github.com/railscasts/325-backbone-on-rails-part-2
 	https://github.com/paul-ylz/raffler-railscast-backbone-tutorial
+		rails 4.1.5
 	https://github.com/k5o/raffler
+		rails 3.2.13
 	https://github.com/davetchen/Raffler
+		rails 3.2.1
 	https://github.com/dsilver829/raffler
+		rails 3.2.6
+
 
 tuto2
 https://thoughtbot.com/upcase/hands-on-backbone-js-on-rails
 	https://github.com/thoughtbot/hands-on-backbone-js-on-rails-solution
+		rails 4.0.0
 	https://github.com/thoughtbot/backbone-js-on-rails
+
 
 tuto3
 https://blog.leshill.org/blog/2012/09/04/backbone-js-and-rails.html
 	https://github.com/leshill/backbone_and_rails_example
-
+	rails 3.2
 
 tuto4
 https://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example/
 	https://github.com/jamesyu/CloudEdit
+	rails 2.3.8 (!)
 
 
-tuto5
-	https://github.com/rafaeljesus/agile2go
+------------------------------------
 
-tuto6
-	https://github.com/gertig/backbone-demo
 
-tuto7
-	https://github.com/nwj/nevernote
+https://github.com/codebrew/backbone-rails
+
+
+
+https://github.com/search?o=desc&q=rails+4+backbone&s=updated&type=Repositories
+
+
+------------------------
+
+https://github.com/rgilbert82/trello_clone_rails
+	rails 5.0.2
+https://github.com/ProdanSergey/Marionette.js-with-Rails-5
+	rails 5.2
+https://github.com/nolds9/rails-5-api-radio
+	rails 5
+https://github.com/noahzgordon/trello-clone
+	4.0.2
+https://github.com/diiiefiend/cocktailist
+	rails 4.2
+https://github.com/didil/ChatLoop
+	rails 4
+https://github.com/toshimaru/rails_backbone_demo_app
+	rails 4.2
+
+
+https://github.com/rafaeljesus/agile2go
+	rails 4.0.0
+https://github.com/gertig/backbone-demo
+	rails 3.0.7
+https://github.com/sameertotey/backbone_sample
+	rails 4.1
+https://github.com/heated/FacebookClone
+	rails 3
+https://github.com/alexkonrad/ansiktebook
+	rails 3
+https://github.com/liamks/Chatty
+	rails 3.2.1
+https://github.com/noahzgordon/trello-clone
+	rails 4.0.2
 
 
 
