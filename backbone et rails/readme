@@ -1,8 +1,5 @@
 
-http://railscasts.com/episodes/323-backbone-on-rails-part-1?autoplay=true
-
-http://railscasts.com/episodes/325-backbone-on-rails-part-2?autoplay=true
-
+https://github.com/rgilbert82/trello_clone_rails
 
 ------------------------------
 !!!!!!!!!!!!!!!!
@@ -16,10 +13,11 @@ la façon d'inclure la lib a pas forcément changé non plus :
 https://github.com/vendethiel/ItemRaffler/tree/coffee
 
 
-
 https://github.com/SSalekin/backbone_rails_demo
 	rails 5.2
 	https://viblo.asia/p/using-backbonejs-as-rails-view-1VgZvEwpKAw
+https://github.com/rgilbert82/trello_clone_rails
+	rails 5
 
 https://github.com/mohnish/money
 	rails 4.2.5
@@ -169,3 +167,8 @@ https://medium.com/preply-engineering/migrating-from-backbone-js-to-react-js-wit
 
 https://www.clayallsopp.com/posts/from-backbone-to-react/
 
+
+---------------------
+http://railscasts.com/episodes/323-backbone-on-rails-part-1?autoplay=true
+
+http://railscasts.com/episodes/325-backbone-on-rails-part-2?autoplay=true

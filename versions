@@ -228,3 +228,32 @@ bundle exec rake test
 bundle install
 bundle exec rake db:create db:migrate db:seed
 bundle exec rails s
+
+----------------------------------
+brew uninstall rbenv-bundler
+rm -r rbenv root/shims
+rbenv rehash
+
+rbenv install
+
+gem list bundle --remote --all
+gem uninstall bundler
+
+cat Gemfile.lock | grep -A 1 "BUNDLED WITH"
+BUNDLED WITH
+   1.17.3
+gem install bundler -v '1.10.4'  # 1.17.3
+bundle -v
+bundle install
+bundle update
+
+bundle exec rake db:migrate
+
+bundle exec rake db:seed
+bundle exec rails s
+
+
+https://www.fromdual.com/reset-mysql-password-on-macos
+
+-----------------
+
