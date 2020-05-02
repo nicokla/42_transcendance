@@ -1,0 +1,97 @@
+= URL Gem
+
+A simple url object to allow for object oriented based manipulation and usage of a url. It works with Typhoeus if it detects it's installed
+or defaults back to Net::HTTP.
+
+== Usage
+
+=== Basic Usage
+
+You can easily extract or change any part of the url
+
+  url = URL.new('https://mail.google.com/mail/?shva=1#mbox')
+  url.params # => {:shva => '1'}
+  url.scheme # => 'https'
+  url.host   # => 'mail.google.com'
+  url.domain # => 'google.com'
+  url.subdomain # => ['mail']
+  url.path   # => '/mail/'
+  url.hash   # => 'mbox'
+  
+  url.subdomain = ['my','mail']
+  url.params[:foo] = 'bar'
+  url.to_s   # => 'https://my.mail.google.com/mail/?foo=bar&shva=1#mbox'
+
+=== Make Requests
+
+You can quickly and easily make requests from those urls without having to worry about whether they're https or not.
+
+  url = URL.new('https://graph.facebook.com/37901410')
+  response = url.get
+  response # => "{"id":"37901410","name":"Tal Atlas","first_name":"Tal","last_name":"Atlas","link":"http:\\/\\/www.facebook.com\\/talatlas","gender":"male","locale":"en_US"}"
+
+A {URL::Response} object is returned from {URL#post}, {URL#get}, or {URL#delete}. This is basically a string with a few additional methods including:
+
+The time the request took in seconds
+The http code of the response and whether the request was successful or not (code == 2xx).
+
+  response.time     # => 1.6
+  response.code     # => 200
+  response.success? # => true
+
+You can make GET, POST, or DELETE requests without doing any special formatting.
+
+  url.path << '/feed'
+  url.params[:access_token] = '.....'
+  url.params[:message] = "Hey I'm posting this message with ruby"
+  json = url.post
+  
+  post_id = magic_method(json)
+  
+  url.path = "/#{post_id}"
+  url.params.delete(:message)
+  url.delete
+
+=== JSON
+
+If you've initialized the Yajl, JSON, or Active Service gems you can call .json on any response object.
+
+  url = URL.new('https://graph.facebook.com/37901410')
+  url.get.json # => => {"name"=>"Tal Atlas", "gender"=>"male", "id"=>"37901410", "last_name"=>"Atlas", "locale"=>"en_US", "link"=>"http://www.facebook.com/talatlas", "first_name"=>"Tal"}
+
+=== Make Custom Objects
+
+Make objects designed around specific urls
+
+  class FacebookURL < URL('http://www.facebook.com/__test_me__/foo/__test_again__')
+    allow_changed :subdomain
+    allow_params :foo, :bar
+  end
+
+This will create a FacebookURL object where you can only change the subdomain, the params foo and bar, and the parts of the paths tagged
+test_me and test_again. This object has the getters and setters: subdomain, foo, bar, test_me, and test_again. You can then call .to_s,
+.get, .post, or .delete.
+
+The object has an instance variable defined as @url which is a url object you can manipulate.
+
+== TODO
+* Fast Dup method
+* More Documentation
+* More specs
+* Make faster
+* JSON support
+* More robust subdomain/path methods
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Tal Atlas. See LICENSE for details.

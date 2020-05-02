@@ -1,0 +1,13 @@
+current directory: /Users/nicolas/Desktop/facebookClones/facebookCloneBolah/vendor/bundle/ruby/2.6.0/gems/json-2.3.0/ext/json
+/Users/nicolas/.rbenv/versions/2.6.3/bin/ruby -I /Users/nicolas/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20200501-95783-1bfb0vh.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nicolas/Desktop/facebookClones/facebookCloneBolah/vendor/bundle/ruby/2.6.0/gems/json-2.3.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/nicolas/Desktop/facebookClones/facebookCloneBolah/vendor/bundle/ruby/2.6.0/gems/json-2.3.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/nicolas/Desktop/facebookClones/facebookCloneBolah/vendor/bundle/ruby/2.6.0/gems/json-2.3.0/ext/json
+make "DESTDIR=" install
