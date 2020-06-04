@@ -1,17 +1,19 @@
 
-https://github.com/rgilbert82/trello_clone_rails
-
 ------------------------------
 !!!!!!!!!!!!!!!!
 
-la façon d'inclure la lib a pas forcément changé non plus :
-- tu fous la lib genre dans vendor/assets/javascripts/, fichier backbone.js
-- tu vas dans ton app/assets/javascripts/, fichier application.js
-- tu rajoutes un //= require backbone
+
+https://addyosmani.com/backbone-fundamentals/
 
 
-https://github.com/vendethiel/ItemRaffler/tree/coffee
+https://stackoverflow.com/questions/56242664/how-to-require-custom-js-files-in-rails-6
+https://www.mashrurhossain.com/blog/rails6bootstrap4
+https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole
 
+
+---------------------
+
+before rails 6: coffeescript backbone.js
 
 https://github.com/SSalekin/backbone_rails_demo
 	rails 5.2
@@ -33,7 +35,8 @@ https://github.com/vintikzzz/backbone-bootstrap-rails
 	rails 3.2.8
 https://github.com/dthtvwls/rails-backbone-todos
 	rails 3.2.3
-
+https://github.com/vendethiel/ItemRaffler/tree/coffee
+	rails 3.2.2
 
 https://www.youtube.com/watch?v=lRuBxG7rTX4      (part 1) !!!!!!!!!!!!!!!
 https://www.youtube.com/watch?v=98oUGEz_y4g      (part 2)
