@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  transcendance_db:
+    image: postgres:12.2
+    container_name: transcendance_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+
+  transcendance:
+    build: .
+    image: transcendance
+    container_name: transcendance
+    command: bash -c  "rm -vf /transcendance/tmp/pids/server.pid &&
+                       yarn install --check-files &&
+                       bundle install &&
+                       (rake db:migrate || rake db:create db:migrate) &&
+                       rake assets:clean &&
+                       rails server --binding 0.0.0.0 --port 3000"
+    volumes:
+      - ./:/transcendance/
+    ports:
+      - 3000:3000
+    environment:
+      PONG_DATABASE_USERNAME: postgres
+      PONG_DATABASE_PASSWORD: password
+      RAILS_ENV: ${RAILS_ENV:-development}
+    depends_on:
+      - transcendance_db
+
+# docker-compose build
+# docker-compose up
+# docker-compose down
+# docker-compose run transcendance bash [+ bundle install]
+# sudo chown -R $USER:$USER . [shared volume]
+# docker-compose up --build
