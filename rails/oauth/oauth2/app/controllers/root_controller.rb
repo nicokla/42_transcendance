@@ -14,7 +14,13 @@ class RootController < ApplicationController
 			OAuth2.token(endpoint, params[:code], params[:state]);
 			endpoint = "https://api.intra.42.fr/oauth/token/info";
 			key = "resource_owner_id";
-			@response = OAuth2.authenticated_request(endpoint, key);
+			@userId = OAuth2.authenticated_request(endpoint)["resource_owner_id"];
+			
+			sleep(0.5)
+			#https://api.intra.42.fr/apidoc/2.0/users/show.html
+			endpoint2 = "https://api.intra.42.fr/v2/users/" + @userId.to_s();
+			@login = OAuth2.authenticated_request(endpoint2)["login"];
+			@imageUrl = 'https://cdn.intra.42.fr/users/small_' + @login + '.jpg'
 		else
 			@response = "internal_error: code not found";
 		end

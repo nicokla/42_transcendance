@@ -36,7 +36,7 @@ module OAuth2
 		end
 	end
 
-	def OAuth2.authenticated_request(endpoint, key)
+	def OAuth2.authenticated_request(endpoint) # , key
 		uri = URI(endpoint);
 		request = Net::HTTP::Get.new(uri);
 		request["Authorization"] = "Bearer " + @response_hash["access_token"];
@@ -45,7 +45,7 @@ module OAuth2
 								   :use_ssl => uri.scheme == "https") do |http|
 			http.request(request);
 		end
-		JSON.parse(response.body)[key];
+		JSON.parse(response.body); # [key]
 	end
 
 end

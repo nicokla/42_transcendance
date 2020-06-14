@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  #host: transcendance_db
+  username: <%= ENV['PONG_DATABASE_USERNAME'] %>
+  password: <%= ENV['PONG_DATABASE_PASSWORD'] %>
+  pool: 5
+
+development:
+  <<: *default
+  database: transcendance_development
+
+test:
+  <<: *default
+  database: transcendance_test
+
+production:
+  <<: *default
+  database: transcendance_production
