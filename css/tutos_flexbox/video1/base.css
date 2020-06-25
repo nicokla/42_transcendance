@@ -1,0 +1,12 @@
+.item{
+	opacity: 1;
+	cursor: pointer;
+	background-color: #7971ea;
+	border: 5px solid #443ea0;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 30px;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}

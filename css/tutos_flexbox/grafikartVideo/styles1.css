@@ -1,0 +1,24 @@
+
+
+.main{
+	height: 600px;
+	background-color: #EEE;
+	display: flex;
+	 /* flex-direction: row;
+	 flex-wrap: nowrap;
+	 flex-start  */
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+} 
+
+.image{
+	flex-grow, flex-shrink
+	flex-grow:1;
+	flex-basis: 50%;
+}
+
+.image:first-child{
+	flex-grow:2;
+}

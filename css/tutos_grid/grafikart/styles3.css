@@ -1,0 +1,15 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.grid > div {
+	background-color: #ccc;
+	border: solid 1px #999;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-column-gap: 20px;
+}

@@ -1,0 +1,28 @@
+.square {
+	height: 100px;
+	width: 100px;
+  position: absolute;
+	border-radius: 10px;
+	border: 1px solid #333;
+  line-height: 60px;
+}
+
+.rouge{
+	background-color: red;
+	font-style: italic;
+	top:0px;
+	left:0px;
+}
+
+.bleu{
+	background-color: cornflowerblue;
+	top:0px;
+	left:100px;
+	font-weight: bold;
+}
+
+.vert{
+	background-color: greenyellow;
+	top:0px;
+	left:200px;
+}

@@ -1,0 +1,19 @@
+
+#flashMessage {
+	display: none;
+	/* // border: 1px solid black; */
+	background: #6495ED;
+	width: 20%;
+	bottom: 1%;
+	left: 80%;
+	position: fixed;
+}
+
+#flashMessage h2 {
+	text-align: center;
+	font-family: serif;
+}
+
+#flashMessage button {
+	justify-content: center;
+}

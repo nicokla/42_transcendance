@@ -1,0 +1,8 @@
+.container{
+	display: flex;
+	flex-direction: row; 
+	/* row-reverse */
+	flex-wrap: wrap;
+	justify-content: space-evenly; 
+	/* center */
+}

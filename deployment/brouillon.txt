@@ -1,0 +1,70 @@
+
+summary
+1) nginx proxy
+2) heroku (seems to be the easiest)
+3) aws + docker compose ?
+
+------------
+
+1) nginx proxy
+
+https://gorails.com/episodes/deploy-actioncable-and-rails-5.amp
+
+https://gist.github.com/dashedstripes/59429522c17019abaa0c40f80041fb5c
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
+
+	root /usr/share/nginx/html;
+	index index.html index.htm;
+
+	server_name localhost;
+
+	location / {
+		proxy_pass http://127.0.0.1:3000/;
+		proxy_set_header        Host              $http_host;
+	}
+
+	location /cable {
+		proxy_pass http://127.0.0.1:3000/cable;
+		proxy_http_version 1.1;
+     		proxy_set_header Upgrade $http_upgrade;
+     		proxy_set_header Connection "upgrade";
+	}
+}
+
+
+----------------------------
+
+2) heroku (seems to be the easiest)
+
+https://youtu.be/EyGI3u2X8UM
+
+https://devcenter.heroku.com/articles/redistogo#using-with-rails-2-3-3
+
+https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable#deploying-our-application-to-heroku
+
+config/cable.yml
+https://github.com/ziraqyoung/rails-realtime-chatapp/blob/master/config/cable.yml
+production:
+  adapter: redis
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV["REDISTOGO_URL"] %>
+  channel_prefix: rails_chat_tutorial_production
+
+config/environments/production.rb
+https://github.com/ziraqyoung/rails-realtime-chatapp/blob/master/config/environments/production.rb
+  config.web_socket_server_url =
+    'wss://rails-realtime-chatapp.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = %w[
+    https://rails-realtime-chatapp.herokuapp.com
+    http://rails-realtime-chatapp.herokuapp.com
+  ]
+
+
+---------------------------
+
+3) aws ec2 + docker compose
+
+https://medium.com/@matayoshi.mariano/dockerize-and-deploy-to-aws-ec2-9208068fb92b

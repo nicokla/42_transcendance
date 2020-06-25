@@ -1,0 +1,14 @@
+
+
+
+.mosaic{
+	width: 350px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.mosaic img{
+	margin: 5px 0;
+}
