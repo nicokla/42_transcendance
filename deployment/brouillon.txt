@@ -1,7 +1,7 @@
 
 summary
 1) nginx proxy
-2) heroku (seems to be the easiest)
+2) heroku
 3) aws + docker compose ?
 
 ------------
@@ -37,9 +37,27 @@ server {
 
 ----------------------------
 
-2) heroku (seems to be the easiest)
+2) heroku
+
+https://devcenter.heroku.com/articles/getting-started-with-rails6
+
+heroku create
+heroku run rake db:migrate
+heroku ps:scale web=1
+
+
+
+https://devcenter.heroku.com/articles/redistogo#using-with-rails-2-3-3
+
+
+
+--------------
+
+2) heroku suite
 
 https://youtu.be/EyGI3u2X8UM
+
+https://devcenter.heroku.com/articles/heroku-redis
 
 https://devcenter.heroku.com/articles/redistogo#using-with-rails-2-3-3
 
@@ -68,3 +86,11 @@ https://github.com/ziraqyoung/rails-realtime-chatapp/blob/master/config/environm
 3) aws ec2 + docker compose
 
 https://medium.com/@matayoshi.mariano/dockerize-and-deploy-to-aws-ec2-9208068fb92b
+
+https://youtu.be/jAgElwaheXo
+
+https://www.codewithjason.com/install-nginx-passenger-ec2-instance-rails-hosting/
+
+https://itnext.io/docker-rails-puma-nginx-postgres-999cd8866b18
+
+https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose

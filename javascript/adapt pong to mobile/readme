@@ -1,5 +1,18 @@
 
 
+
+https://stackoverflow.com/questions/1664785/resize-html5-canvas-to-fit-window/3078427#3078427
+window.innerWidth
+window.innerHeight
+
+https://www.tutorialrepublic.com/faq/how-to-detect-screen-resolution-with-javascript.php#:~:text=Answer%3A%20Use%20the%20window.,on%20click%20of%20the%20button
+window.screen.width 
+window.devicePixelRatio
+
+
+------------------
+
+
 https://www.video-game-codeur.fr/creer-un-jeu-video-html5-pong-version-smartphone-2eme-partie/
 
 
@@ -9,6 +22,15 @@ https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Events/Touch_events
 
 
 Exemple paint dans canvas
+
+function startup() {
+  var el = document.getElementsByTagName("canvas")[0];
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleLeave, false);
+  el.addEventListener("touchmove", handleMove, false);
+}
 
 function handleStart(evt) {
   evt.preventDefault();
