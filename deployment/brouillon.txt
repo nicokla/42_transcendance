@@ -42,9 +42,13 @@ server {
 https://devcenter.heroku.com/articles/getting-started-with-rails6
 
 heroku create
+git push heroku master
 heroku run rake db:migrate
 heroku ps:scale web=1
-
+heroku apps:rename nouveauNom
+heroku addons:create redistogo
+heroku open
+heroku logs --tail
 
 
 https://devcenter.heroku.com/articles/redistogo#using-with-rails-2-3-3
@@ -85,12 +89,29 @@ https://github.com/ziraqyoung/rails-realtime-chatapp/blob/master/config/environm
 
 3) aws ec2 + docker compose
 
-https://medium.com/@matayoshi.mariano/dockerize-and-deploy-to-aws-ec2-9208068fb92b
 
 https://youtu.be/jAgElwaheXo
 
+
+chmod 400 ~/Desktop/examplekeypair.pem
+ssh -i ~/Desktop/examplekeypair.pem ec2-user@35.175.134.202
+sudo yum update
+sudo yum install git-all
+git clone ...
+sudo yum install docker
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo usermod -aG docker $USER
+sudo service docker start
+sudo chown $USER /var/run/docker.sock
+
+-----------
+
+2) aws ec2 suite
+
+https://medium.com/@matayoshi.mariano/dockerize-and-deploy-to-aws-ec2-9208068fb92b
 https://www.codewithjason.com/install-nginx-passenger-ec2-instance-rails-hosting/
-
 https://itnext.io/docker-rails-puma-nginx-postgres-999cd8866b18
-
 https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose
+
+
