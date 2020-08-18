@@ -14,5 +14,10 @@ curl, (wget), httpie
 C
 use sockets + http protocol
 
+Android
+Volley and okHttp
+
+iOS
+Alamofire
 
 
