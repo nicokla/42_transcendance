@@ -1,11 +1,12 @@
 
-
-
 JS
 - newest : fetch, axios  
 	---> Promises : async functions, then vs await
 - old: jquery.ajax
 - very old: xmlHttpRequests
+
+HTML
+- form, send POST request on submit click
 
 COMMAND LINE
 curl, (wget), httpie
