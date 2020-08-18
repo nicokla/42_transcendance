@@ -1,0 +1,17 @@
+
+
+
+JS
+- newest : fetch, axios  
+	---> Promises : async functions, then vs await
+- old: jquery.ajax
+- very old: xmlHttpRequests
+
+COMMAND LINE
+curl, (wget), httpie
+
+C
+use sockets + http protocol
+
+
+
