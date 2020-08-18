@@ -1,0 +1,20 @@
+https://stackoverflow.com/questions/9707397/making-a-div-vertically-scrollable-using-css
+
+---->
+overflow-y: auto
+---->
+
+You have it covered aside from using the wrong property. The scrollbar can be triggered with any property overflow, overflow-x, or overflow-y and each can be set to any of visible, hidden, scroll, auto, or inherit. You are currently looking at these two:
+
+auto - This value will look at the width and height of the box. If they are defined, it won't let the box expand past those boundaries. Instead (if the content exceeds those boundaries), it will create a scrollbar for either boundary (or both) that exceeds its length.
+
+scroll - This values forces a scrollbar, no matter what, even if the content does not exceed the boundary set. If the content doesn't need to be scrolled, the bar will appear as "disabled" or non-interactive.
+
+If you always want the vertical scrollbar to appear:
+
+You should use overflow-y: scroll. This forces a scrollbar to appear for the vertical axis whether or not it is needed. If you can't actually scroll the context, it will appear as a"disabled" scrollbar.
+
+If you only want a scrollbar to appear if you can scroll the box:
+
+Just use overflow: auto. Since your content by default just breaks to the next line when it cannot fit on the current line, a horizontal scrollbar won't be created (unless it's on an element that has word-wrapping disabled). For the vertical bar,it will allow the content to expand up to the height you have specified. If it exceeds that height, it will show a vertical scrollbar to view the rest of the content, but will not show a scrollbar if it does not exceed the height.
+

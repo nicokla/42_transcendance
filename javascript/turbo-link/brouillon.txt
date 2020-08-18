@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/36110789/rails-5-how-to-use-document-ready-with-turbo-links
+
+
+$( document ).on('turbolinks:load', function() {
+  console.log("It works on each visit!")
+})

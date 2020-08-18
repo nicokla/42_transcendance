@@ -1,0 +1,36 @@
+
+-Crud (s)
+create / read_n read_1 / update / delete / (search)
+
+--------------------
+
+-Http methods
+post / get get:id / put (ou patch) / delete / get:query
+
+-----------------
+
+-Rails actions in "ressource" controller
+create / index show(id) / update / destroy / search
+
+--------------------
+
+-Backbone (au lieu de : fetch, axios, jquery.ajax, form, xhr)
+col.create(data) / col.fetch fetch(id) / save(id, data) / destroy(id)
+(new ? set ? get ?)
+
+-backbone2 if(!isNan(col.get(id))
+C col.create(data, wait:true) = add + save
+(ou new + save)
+R_1 : set({id:42}) + fetch() =? fetch({id:42})
+R_n coll : col.fetch col.get(id)
+U set(key: value) + save() = save(key: value)
+D destroy(id)
+S where
+
+---------------------
+
+-sql
+C insert
+R select from join where groupby orderby
+U update set where
+D delete frome where
