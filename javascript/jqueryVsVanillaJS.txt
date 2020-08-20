@@ -9,7 +9,7 @@ vanilla / jquery
 ------------
 
 addeventlistener  /  on (ou bind)
-document.queryselectorall /  $
+document.querySelectorAll /  $('.myclass')
 document.createElement /  $('<div></div>')
 appendChild / append
 innerHTML / html()
@@ -21,3 +21,117 @@ document.querySelector(".box").style.color = "#000";
 $(".box").addClass("focus");
 var box = document.querySelector(".box");
 box.classList.add("focus");
+
+
+----------------------
+
+Résumé de https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/#selecting-elements
+
+$(".box");
+document.querySelector(".box");
+document.querySelectorAll(".box");
+
+$(".box").hide();
+document.querySelectorAll(".box").forEach(box => { box.style.display = "none" })
+
+
+var container = $(".container");
+container.find(".box");
+var container = document.querySelector(".container");
+container.querySelector(".box");
+
+
+$(".box").next();
+$(".box").prev();
+$(".box").parent();
+var box = document.querySelector(".box");
+box.nextElementSibling;
+box.previousElementSibling;
+box.parentElement;
+
+$(".button").click(function(e) { /* handle click event */ });
+$(".button").mouseenter(function(e) {  /* handle click event */ });
+$(document).keyup(function(e) {  /* handle key up event */  });
+document.querySelector(".button").addEventListener("click", (e) => { /* ... */ });
+document.querySelector(".button").addEventListener("mouseenter", (e) => { /* ... */ });
+document.addEventListener("keyup", (e) => { /* ... */ });
+
+$(".search-container").on("click", ".search-result", handleClick);
+var searchElement = document.createElement("div");
+document.querySelector(".search-container").appendChild(searchElement);
+searchElement.addEventListener("click", handleClick);
+
+
+$(document).trigger("myEvent");
+$(".box").trigger("myEvent");
+document.dispatchEvent(new Event("myEvent"));
+document.querySelector(".box").dispatchEvent(new Event("myEvent"));
+
+$(".box").css("color", "#000");
+document.querySelector(".box").style.color = "#000";
+
+$(".box").css({
+  "color": "#000",
+  "background-color": "red"
+});
+var box = document.querySelector(".box");
+box.style.color = "#000";
+box.style.backgroundColor = "red";
+box.style.cssText = "color: #000; background-color: red";
+
+$(".box").hide();
+$(".box").show();
+document.querySelector(".box").style.display = "none";
+document.querySelector(".box").style.display = "block";
+
+$(document).ready(function() { 
+  /* Do things after DOM has fully loaded */
+});
+var ready = (callback) => {
+  if (document.readyState != "loading") callback();
+  else document.addEventListener("DOMContentLoaded", callback);
+}
+ready(() => { 
+  /* Do things after DOM has fully loaded */ 
+});
+
+$(".box").addClass("focus");
+$(".box").removeClass("focus");
+$(".box").toggleClass("focus");
+var box = document.querySelector(".box");
+box.classList.add("focus");
+box.classList.remove("focus");
+box.classList.toggle("focus");
+document.querySelector(".box").classList.replace("focus", "blurred");
+
+if ($(".box").hasClass("focus"))
+if (document.querySelector(".box").classList.contains("focus"))
+
+$.ajax({url: "data.json"})
+	.done(function(data) {
+    // ...
+  }).fail(function() {
+    // Handle error
+  });
+fetch("data.json")
+  .then(data => {
+    // Handle data
+  }).catch(error => {
+    // Handle error
+  });
+
+$("<div/>");
+$("<span/>");
+document.createElement("div");
+document.createElement("span");
+
+$(".button").text("New text");
+$(".button").text(); // Returns "New text"
+document.querySelector(".button").textContent = "New text";
+document.querySelector(".button").textContent; // Returns "New text"
+https://stackoverflow.com/questions/35213147/difference-between-textcontent-vs-innertext
+
+$(".container").append($("<div/>"));
+var element = document.createElement("div");
+document.querySelector(".container").appendChild(element);
+
