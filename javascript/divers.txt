@@ -1,0 +1,31 @@
+Onpopstate (to handle backbutton, used in backbone.router)
+
+
+Preventdefault (example, if want customized form submit)
+
+
+Date.now
+
+
+JSON.stringify
+JSON.parse
+
+
+https://www.javascripture.com/HTMLElement
+https://www.javascripture.com/Element
+https://www.javascripture.com/Node
+https://www.javascripture.com/EventTarget
+
+
+
+Array manipulation ((lodash or underscore) VS vanillaJS)
+https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
+
+
+
+let module = await import('/modules/mon-module.js');
+
+
+
+yarn vs npm cheatsheet
+https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc

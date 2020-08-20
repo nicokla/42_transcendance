@@ -1,0 +1,23 @@
+
+https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/#selecting-elements
+
+https://gist.github.com/joyrexus/7307312
+
+
+-------------
+vanilla / jquery
+------------
+
+addeventlistener  /  on (ou bind)
+document.queryselectorall /  $
+document.createElement /  $('<div></div>')
+appendChild / append
+innerHTML / html()
+innerText (ou textContent)  /  text()
+
+$(".box").css("color", "#000");
+document.querySelector(".box").style.color = "#000";
+
+$(".box").addClass("focus");
+var box = document.querySelector(".box");
+box.classList.add("focus");

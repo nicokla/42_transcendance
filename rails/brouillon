@@ -366,9 +366,9 @@ https://www.stuartellis.name/articles/erb/
 https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application
 
 
-
 -------------------------------
 
-
+logger.info request.env
+(print http request)
 
 

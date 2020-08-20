@@ -1,0 +1,85 @@
+
+1) Axios
+https://github.com/axios/axios
+
+axios.get('/foo')
+  .catch(function (error) {
+    if (error.response) {
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    }
+  });
+
+
+
+You can use try/catch to get the same result:
+try { await axios.get('/api') } catch (error) { // Handle error }
+There is also a shorter version if appropriate:
+await axios.get('/api').catch(error => console.error(error))
+
+
+
+---------------
+
+2) fetch
+
+let response = await fetch('/api/users', {
+	method: 'POST',
+	headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+	body: JSON.stringify(data)
+});
+
+fetch(`/api/users/${id}`).then(resp => {
+	if (resp.ok) resp.json().then(({ messages }) =>
+		messages.forEach(message => this.active.onMessage(message)));
+});
+
+
+--------------------
+
+3) jquery.ajax
+
+
+$.ajax({
+	async: false,
+	type: 'GET',
+	url: '/user', 
+	success: function(res){
+		global.myid = res.id
+	}
+})
+
+--------------
+
+4) xhr (xml http request)
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://example.com', true);
+xhr.send(null);
+
+
+
+
+-----------------
+
+5) html form
+
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!">
+  </div>
+</form>

@@ -1,0 +1,125 @@
+
+:root {
+	--small: 0.25rem;
+	--medium: 0.5rem;
+	--big: 1rem;
+
+	--main-button: rgb(240, 240, 240);
+	--main-button-hover: rgb(32, 96, 133);
+
+	--text-color: rgb(42, 42, 42);
+	--text-light: rgb(250, 250, 250);
+	--text-lighter: white;
+
+	--outline-color: rgb(30, 30, 30);
+
+	--bg-lighter: white;
+	--bg-light: rgb(240, 240, 240);
+	--bg-lessdark: rgb(192, 192, 192);
+	--bg-dark: rgb(24, 16, 16);
+	--bg-blue: rgb(72, 148, 155);
+
+	--bg-1: #225478;
+	--bg-2: #218790;
+	--bg-3: #89c6d2;
+
+	--color1: rgba(38, 83, 43, 1);
+	--color2: rgba(57, 158, 90, 1);
+	--color3: rgba(96, 150, 186, 1);
+	--color3-dark: rgb(72, 115, 145);
+	--color4: rgba(163, 206, 241, 1);
+	--color4-light: rgb(194, 227, 255);
+	--color5: rgba(111, 88, 75, 1);
+	--color6: rgb(144, 33, 33);
+	--color7: rgb(94, 21, 21);
+}
+
+/** Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+	overflow-y: auto;
+}
+
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: var(--text-color);
+	background: var(--bg-1);
+	background: linear-gradient(0deg, var(--color1), var(--color2));
+	background-size: 600% 600%;
+	/* -webkit-animation: background-flash 6s ease infinite;
+	-moz-animation: background-flash 6s ease infinite;
+	animation: background-flash 6s ease infinite; */
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* ------------------------------------ */
+/* Modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	cursor: pointer;
+}
+
+.show-modal {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+	background-color: var(--bg-light);
+	margin-left: 20%;
+	margin-right: 20%;
+	overflow: hidden;
+	border-radius: 4px;
+	cursor: initial;
+	max-height: 75vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.modal-header {
+	flex-shrink: 0;
+}
+
+.modal-body {
+	overflow: auto;
+}
+
+.close-button {
+	float: right;
+	width: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	background-color: lightgray;
+}
+
+.close-button:hover {
+	background-color: darkgray;
+}
