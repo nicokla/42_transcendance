@@ -11,6 +11,7 @@ JSON.stringify
 JSON.parse
 
 
+https://devdocs.io/dom/element
 https://www.javascripture.com/HTMLElement
 https://www.javascripture.com/Element
 https://www.javascripture.com/Node
@@ -23,9 +24,16 @@ https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
 
 
 
+dynamic loading library
 let module = await import('/modules/mon-module.js');
 
 
 
 yarn vs npm cheatsheet
 https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc
+
+
+----------------
+
+npx http-server
+https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server

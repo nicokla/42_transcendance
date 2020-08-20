@@ -1,0 +1,56 @@
+
+inheritance / oriented object programming in js
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+
+- Methode 1 : using prototype , i.e. __proto__ ) 
+function Graphe() {
+  this.sommets = [];
+  this.arêtes = [];
+}
+Graphe.prototype = {
+  ajoutSommet: function(v) {
+    this.sommets.push(v);
+  }
+};
+var g = new Graphe();
+
+
+- Methode 2 : using class )
+class Rectangle {
+  constructor(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+  }
+}
+class Carre extends Rectangle {
+  constructor(longueur) {
+    super(longueur, longueur);
+  }
+  get aire() {
+    return this.hauteur * this.largeur;
+  }
+	set cote(longueur) {
+    this.hauteur = longueur;
+    this.largeur = longueur;
+  }
+}
+var carre = new Carre(2);
+carre.aire (---> 4)
+carre.cote = 3
+carre.aire (---> 9)
+
+
+- Methode 3 ) Object.create
+
+var a = {a: 1}; 
+// a ---> Object.prototype ---> null
+var b = Object.create(a);
+// b ---> a ---> Object.prototype ---> null
+console.log(b.a); // 1 (inherited)
+var c = Object.create(b);
+// c ---> b ---> a ---> Object.prototype ---> null
+var d = Object.create(null);
+// d ---> null
+console.log(d.hasOwnProperty); 
+// undefined, because d doesn't inherit from Object.prototype
