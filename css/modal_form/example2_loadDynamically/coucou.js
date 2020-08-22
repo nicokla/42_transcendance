@@ -8,7 +8,7 @@ class MyModel extends Backbone.Model {
 async function LoadModule(module) {
 	if (!window[module]){
 		// dynamic loading
-		window[module] = await import(`./${module}.js`);
+		window[module] = await import(`${module}.js`);
 	}	
 	return window[module];
 }

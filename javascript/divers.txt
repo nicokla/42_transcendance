@@ -1,4 +1,5 @@
-Onpopstate (to handle backbutton, used in backbone.router)
+onpopstate (to handle backbutton without hash, used in backbone.router)
+(else use hashchange)
 
 
 Preventdefault (example, if want customized form submit)
@@ -9,13 +10,6 @@ Date.now
 
 JSON.stringify
 JSON.parse
-
-
-https://devdocs.io/dom/element
-https://www.javascripture.com/HTMLElement
-https://www.javascripture.com/Element
-https://www.javascripture.com/Node
-https://www.javascripture.com/EventTarget
 
 
 
@@ -33,7 +27,3 @@ yarn vs npm cheatsheet
 https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc
 
 
-----------------
-
-npx http-server
-https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server

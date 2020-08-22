@@ -1,0 +1,7 @@
+
+- directly dart-sass executable (see grafikart)
+https://www.youtube.com/watch?v=MOstrhqpIsI&list=WL&index=90&t=88s
+https://github.com/sass/dart-sass/releases
+
+- or in webpack (sass module, see grafikart webpack series)
+

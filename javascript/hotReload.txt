@@ -1,0 +1,29 @@
+
+
+
+A) Hot reload 
+
+1) webpack dev server (see grafikart tuto:)
+https://www.youtube.com/watch?v=Mc_E_UliWn4&t=313s
+--> can be used with rails:
+- launch bin/webpack-dev-server in a separate console
+- now when launching 'rails s', you will get the hot reload
+
+2) live server
+https://www.youtube.com/watch?v=oXvNYHgsX0g&list=WL&index=89&t=2s
+
+-------------
+
+B) Servers
+
+1) http-server
+https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
+npx http-server
+
+2) connect + serve-static (see css/modal_form/example2)
+node server.js
+You can now go to http://localhost:8080/yourfile.html
+
+3) node.js + express
+
+4) webpack
